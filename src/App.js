@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
+import RecruitPage from "./pages/RecruitPage/RecruitPage";
+import SciencePage from "./pages/SciencePage/SciencePage";
+import CustomerPage from "./pages/CustomerPage/CustomerPage";
+import CompanyPage from "./pages/CompanyPage/CompanyPage";
+import EventPage from "./pages/EventPage/EventPage";
+import ContactusPage from  './pages/ContactusPage/ContactusPage';
+import FaqPage from './pages/FaqPage/FaqPage';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/recruit" element={<RecruitPage />} />
+        <Route path="/science" element={<SciencePage />} />
+        <Route path="/customers" element={<CustomerPage />} />
+        <Route path="/company" element={<CompanyPage />} />
+        <Route path="/events" element={<EventPage />} />
+        <Route path="/faq" element={<FaqPage />} />
+        <Route path="/contactus" element={<ContactusPage />} />
+      
+    
+      
+      </Routes>
+    </BrowserRouter>
   );
 }
 
