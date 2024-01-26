@@ -1,19 +1,9 @@
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-
-import Events from './components/Events';
-
-
-
-
-
+import Events from "./components/Events";
 
 export default function EventPage() {
-    return (
-      <>
-        <Navbar />
-       <Events />
-        <Footer />
-      </>
-    );
-  }
+  return (
+    <div className="overflow-x-hidden">
+      <Events />
+    </div>
+  );
+}

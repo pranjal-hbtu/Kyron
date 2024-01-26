@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import studentJpg from "../assetes/student.jpg";
 import arrowPng from "../assetes/Backarrow.png";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const [selected, setSelected] = useState("Start Hiring");
   return (
     <section className="bg-[#FCFFF6]  ">
       <div className=" flex flex-col md:flex-row mx-3 sm:mx-4 lg:mx-[50px] py-6  lg:mb-10 pb-2 sm:pb-4 lg:pb-6">
@@ -28,13 +31,18 @@ const Header = () => {
               className="py-1 w-full pl-5 flex gap-3 items-center bg-white text-heading-3 shadow-lg shadow-box-shadow border-black rounded-full ease-linear focus-within:bg-body focus-within:border-primary"
             >
               {/* <input className="w-full py-3 outline-none bg-white" /> */}
-              <CustomMenu />
+              <CustomMenu setSelectedVal={setSelected} />
 
               <button variant="primary " className="">
                 <img
                   className="hidden sm:flex rounded-md relative z-[5]"
                   src={arrowPng}
                   alt="/"
+                  onClick={() => {
+                    if (selected === "Start Hiring") navigate("/recruit");
+                    // else if(selected === "Start Learning")navigate("/recruit")
+                    // else if(selected === "Start Practicing")navigate("/recruit")
+                  }}
                 />
               </button>
             </form>
@@ -47,19 +55,19 @@ const Header = () => {
       </div>
     </section>
   );
-
 };
 
 export default Header;
 
-const list = [ "Start Hiring", "Start Learning",  "Start Practicing"];
+const list = ["Start Hiring", "Start Learning", "Start Practicing"];
 
-function CustomMenu() {
+function CustomMenu({ setSelectedVal }) {
   const [selected, setSelected] = useState(list[0]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleListClick = (val) => {
     setSelected(val);
+    setSelectedVal(val);
     setIsMenuOpen(false);
   };
 
