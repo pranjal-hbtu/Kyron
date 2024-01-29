@@ -19,7 +19,7 @@ const Start = () => {
           <button
             className="bg-[#B8FB3C] px-6 py-3 mx-2 text-[10px] md:text-sm font-bold hover:bg-black hover:text-white"
             onClick={() => {
-              // navigate("/recruit")
+              navigate("/academy");
             }}
           >
             Start Learning

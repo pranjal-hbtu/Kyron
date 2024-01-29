@@ -140,10 +140,10 @@ const Footer = () => {
                   </li>
                   <li className="mb-3">
                     <a
-                      href="/"
+                      href="/terms-of-service"
                       className="text-[#43505b] text-[16px]  hover:underline"
                     >
-                      Terms of Policy
+                      Terms of Service
                     </a>
                   </li>
                 </ul>

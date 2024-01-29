@@ -11,6 +11,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ReturnPolicy from "./pages/ReturnPolicy/ReturnPolicy";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService/TermsOfService";
+import Academy from "./pages/Academy/Academy";
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/academy" element={<Academy />} />
         <Route path="/recruit" element={<RecruitPage />} />
         <Route path="/science" element={<SciencePage />} />
         <Route path="/customers" element={<CustomerPage />} />
@@ -29,6 +32,7 @@ function App() {
         <Route path="/contactus" element={<ContactusPage />} />
         <Route path="/return-policy" element={<ReturnPolicy />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
       </Routes>
 
       <Footer />

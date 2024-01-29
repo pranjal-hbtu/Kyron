@@ -30,17 +30,17 @@ const Header = () => {
               action="#"
               className="py-1 w-full pl-5 flex gap-3 items-center bg-white text-heading-3 shadow-lg shadow-box-shadow border-black rounded-full ease-linear focus-within:bg-body focus-within:border-primary"
             >
-              {/* <input className="w-full py-3 outline-none bg-white" /> */}
               <CustomMenu setSelectedVal={setSelected} />
 
-              <button variant="primary " className="">
+              <button variant="primary " className="w-[4rem] sm:w-[7rem]">
                 <img
-                  className="hidden sm:flex rounded-md relative z-[5]"
+                  className="flex rounded-md relative z-[5]"
                   src={arrowPng}
                   alt="/"
                   onClick={() => {
                     if (selected === "Start Hiring") navigate("/recruit");
-                    // else if(selected === "Start Learning")navigate("/recruit")
+                    else if (selected === "Start Learning")
+                      navigate("/academy");
                     // else if(selected === "Start Practicing")navigate("/recruit")
                   }}
                 />
@@ -111,7 +111,7 @@ function CustomMenu({ setSelectedVal }) {
         >
           {list.map((val) => (
             <li
-              class="text-gray-900 relative cursor-default select-none py-2 pl-3 pr-9"
+              class="text-gray-900 cursor-pointer relative cursor-default select-none py-2 pl-3 pr-9"
               id="listbox-option-0"
               role="option"
               onClick={() => handleListClick(val)}

@@ -27,7 +27,7 @@ const Navbar = () => {
           onClick={() => setMobileNav(false)}
           className="mx-1 cursor-pointer  hover:bg-[#e5ffb6] px-2 py-1 rounded-xl"
         >
-          Academy
+          <NavLink to="/academy">Academy</NavLink>
         </li>
 
         <li

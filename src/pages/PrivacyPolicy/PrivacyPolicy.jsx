@@ -2,7 +2,7 @@ import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="w-[80%] mx-auto pt-[3rem] flex flex-col">
+    <div className="w-[98%] md:w-[90%] lg:w-[75%] mx-auto pt-[3rem] flex flex-col">
       <h1 className="text-[3rem] mb-5 text-center">Kyron Privacy Policy</h1>
       <p className="text-[#576871]">
         Data privacy is important to Kyron, and when it comes to your data,
