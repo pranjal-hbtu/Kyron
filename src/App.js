@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import RecruitPage from "./pages/RecruitPage/RecruitPage";
 import SciencePage from "./pages/SciencePage/SciencePage";
@@ -13,6 +13,8 @@ import ReturnPolicy from "./pages/ReturnPolicy/ReturnPolicy";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService/TermsOfService";
 import Academy from "./pages/Academy/Academy";
+import Aicts from "./pages/Aicts/Aicts";
+import { useEffect } from "react";
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/academy" element={<Academy />} />
+        <Route path="/aicts" element={<Aicts />} />
         <Route path="/recruit" element={<RecruitPage />} />
         <Route path="/science" element={<SciencePage />} />
         <Route path="/customers" element={<CustomerPage />} />

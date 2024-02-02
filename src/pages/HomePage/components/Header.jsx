@@ -41,7 +41,8 @@ const Header = () => {
                     if (selected === "Start Hiring") navigate("/recruit");
                     else if (selected === "Start Learning")
                       navigate("/academy");
-                    // else if(selected === "Start Practicing")navigate("/recruit")
+                    else if (selected === "Start Practicing")
+                      navigate("/aicts");
                   }}
                 />
               </button>
@@ -111,7 +112,7 @@ function CustomMenu({ setSelectedVal }) {
         >
           {list.map((val) => (
             <li
-              class="text-gray-900 cursor-pointer relative cursor-default select-none py-2 pl-3 pr-9"
+              class="text-gray-900 cursor-pointer relative select-none py-2 pl-3 pr-9"
               id="listbox-option-0"
               role="option"
               onClick={() => handleListClick(val)}
